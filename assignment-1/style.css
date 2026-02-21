@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+html, body {
+    overflow-x: hidden !important;
+}
+
+:root{
+    --colorAnnouncement: #0f0f0f;
+    --colorAnnouncementText: #ffffff;
+    --typeBaseSize: 18px;
+}
+
+.container{
+    width: 100vw;
+}
+
+/***** header *****/ 
+
+.announcement-bar {
+    background-color: var(--colorAnnouncement);
+    padding: 10px 0;
+    text-align: center;    
+    font-size: calc(var(--typeBaseSize)*.85);
+}
+
+.announcement-bar span{
+    font-size: .9em;
+    font-weight: 700;
+    letter-spacing: .2em;
+    color:var(--colorAnnouncementText) ;
+    padding: 0 5px;
+}
+
+
+/***** End header *****/
+

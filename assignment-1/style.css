@@ -319,6 +319,7 @@ body {
     text-decoration: none;
     color: var(--colorNavText);   
     letter-spacing: 0.1em;
+    font-size: cal(var(--typeBaseSize)*.75);
 }
 
 .product-img{
@@ -346,6 +347,8 @@ body {
     -moz-transition: opacity 0.3s ease;
     -ms-transition: opacity 0.3s ease;
     -o-transition: opacity 0.3s ease;
+    letter-spacing: .2em;
+    font-size: calc(var(--typeBaseSize)*.75);
 }
 
 .product:hover button{
@@ -456,5 +459,137 @@ body {
 .shoes-product-5:hover .shoes-product-img-5 {
     background-image: url("https://pk.lamaretail.com/cdn/shop/files/WFS26SD011-SAND-LITTLE-VENICE-SANDALS-a78d76_2.jpg?v=1772014374&width=1000");
 
+}
+
+
+
+/* season */
+
+
+
+
+.season-product-img-1{
+    background-image: url("https://pk.lamaretail.com/cdn/shop/files/WAS26DR008-TEA-PINK-ONE-SIZE-COTTON-SHIRT-DRESS-b4988d_116.jpg?v=1772006711&width=1080");
+
+}
+.season-product-1:hover .season-product-img-1 {
+    background-image: url("https://pk.lamaretail.com/cdn/shop/files/WAS26DR008-TEA-PINK-ONE-SIZE-COTTON-SHIRT-DRESS-b4988d_121.jpg?v=1772006924&width=1000");
+
+}
+.season-product-img-2{
+    background-image: url("https://pk.lamaretail.com/cdn/shop/files/WAS26TP094-MOCHA-SABLE-EASY-SHIRT-403028_216_540x.jpg?v=1772007490");
+
+}
+.season-product-2:hover .season-product-img-2 {
+    background-image: url("https://pk.lamaretail.com/cdn/shop/files/WAS26TP094-MOCHA-SABLE-EASY-SHIRT-403028_214.jpg?v=1772007490&width=1000");
+
+}
+.season-product-img-3{
+    background-image: url("https://pk.lamaretail.com/cdn/shop/files/WAS26TP074-BEIGE-DROPLET-NECK-TOP-a8a596_1009.jpg?v=1770898631&width=1080");
+
+}
+.season-product-3:hover .season-product-img-3 {
+    background-image: url("https://pk.lamaretail.com/cdn/shop/files/WAS26TP074-BEIGE-DROPLET-NECK-TOP-a89a97_1011.jpg?v=1770898631&width=1000");
+
+}
+.season-product-img-4{
+    background-image: url("https://pk.lamaretail.com/cdn/shop/files/WAS26TP011-WHITE-OVERSIZED-COTTON-BLOUSE-FFFFFF_940.jpg?v=1770897864&width=1080");
+
+}
+.season-product-4:hover .season-product-img-4 {
+    background-image: url("https://pk.lamaretail.com/cdn/shop/files/WAS26TP011-WHITE-OVERSIZED-COTTON-BLOUSE-FFFFFF_943.jpg?v=1770897864&width=1000");
+
+}
+.season-product-img-5{
+    background-image: url("https://pk.lamaretail.com/cdn/shop/files/WAS26TP011-TAUPE-OVERSIZED-COTTON-BLOUSE-a28065_935_540x.jpg?v=1770897884");
+
+}
+.season-product-5:hover .season-product-img-5 {
+    background-image: url("https://pk.lamaretail.com/cdn/shop/files/WAS26TP011-TAUPE-OVERSIZED-COTTON-BLOUSE-8a7a63_929.jpg?v=1770897884&width=1000");
+
+}
+
+
+
+
+/* luxury */
+
+
+
+
+.luxury-product-img-1{
+    background-image: url("https://pk.lamaretail.com/cdn/shop/files/MAS26TP212-CHARCOAL-LUXE-KNIT-POLO-beb0a3_579.jpg?v=1770898887&width=1080");
+
+}
+.luxury-product-1:hover .luxury-product-img-1 {
+    background-image: url("https://pk.lamaretail.com/cdn/shop/files/MAS26TP212-CHARCOAL-LUXE-KNIT-POLO-40444f_572.jpg?v=1770898887&width=1000");
+
+}
+.luxury-product-img-2{
+    background-image: url("https://pk.lamaretail.com/cdn/shop/files/MAS26TP005-BEIGE-STITCH-DETAIL-SAFARI-847e64_254.jpg?v=1771059489&width=1080");
+
+}
+.luxury-product-2:hover .luxury-product-img-2 {
+    background-image: url("https://pk.lamaretail.com/cdn/shop/files/MAS26TP005-BEIGE-STITCH-DETAIL-SAFARI-aca19d_257.jpg?v=1771059489&width=1000");
+
+}
+.luxury-product-img-3{
+    background-image: url("https://pk.lamaretail.com/cdn/shop/files/MAS26TP211-BLACK-SOFT-WEAVE-POLO-000000_535.jpg?v=1770898866&width=1080");
+
+}
+.luxury-product-3:hover .luxury-product-img-3 {
+    background-image: url("https://pk.lamaretail.com/cdn/shop/files/MAS26TP211-BLACK-SOFT-WEAVE-POLO-000000_540.jpg?v=1770898866&width=1000");
+
+}
+.luxury-product-img-4{
+    background-image: url("https://pk.lamaretail.com/cdn/shop/files/MAS26TP210-CREAM-ESSENTIAL-POLO-b8b8ae_520.jpg?v=1770898808&width=1080");
+
+}
+.luxury-product-4:hover .luxury-product-img-4 {
+    background-image: url("https://pk.lamaretail.com/cdn/shop/files/MAS26TP210-CREAM-ESSENTIAL-POLO-cac8bb_523.jpg?v=1770898808&width=1000");
+
+}
+.luxury-product-img-5{
+    background-image: url("https://pk.lamaretail.com/cdn/shop/files/MAS26TP044-GREY-WASHED-EFFECT-SAFARI-SHIRT-575a61_331_540x.jpg?v=1771059505");
+
+}
+.luxury-product-5:hover .luxury-product-img-5 {
+    background-image: url("https://pk.lamaretail.com/cdn/shop/files/MAS26TP044-GREY-WASHED-EFFECT-SAFARI-SHIRT-83847f_333.jpg?v=1771059505&width=1000");
+
+}
+/* BAGS */
+
+
+
+
+.bag-product-img-1{
+background-image: url("https://pk.lamaretail.com/cdn/shop/files/WCS26BG014-COFFEE-MARBELLA-CROSSBODY-BAG-2f202a_334.jpg?v=1772007304&width=1080");
+}
+.bag-product-1:hover .bag-product-img-1 {
+background-image: url("https://pk.lamaretail.com/cdn/shop/files/WCS26BG014-COFFEE-MARBELLA-CROSSBODY-BAG-2f202a_328.jpg?v=1772007362&width=1000");
+}
+.bag-product-img-2{
+background-image: url("https://pk.lamaretail.com/cdn/shop/files/WCW25BG018-YELLOW-CITY-SHOULDER-BAG-b6ba97_424.jpg?v=1772008939&width=1080");
+}
+.bag-product-2:hover .bag-product-img-2 {
+background-image: url("https://pk.lamaretail.com/cdn/shop/files/WCS26BG014-COFFEE-MARBELLA-CROSSBODY-BAG-2f202a_327.jpg?v=1772007362&width=720");
+}
+.bag-product-img-3{
+background-image: url("https://pk.lamaretail.com/cdn/shop/files/WCS26BG027-COFFEE-VIGO-DAY-TOTE-5e504d_377.jpg?v=1772007884&width=1080");
+}
+.bag-product-3:hover .bag-product-img-3 {
+background-image: url("https://pk.lamaretail.com/cdn/shop/files/WCS26BG027-COFFEE-VIGO-DAY-TOTE-5e504d_384.jpg?v=1772007884&width=1000");
+}
+.bag-product-img-4{
+background-image: url("https://pk.lamaretail.com/cdn/shop/files/WCS26BG028-CAMEL-THE-ERRAND-TOTE-785a50_403_540x.jpg?v=1772008268");
+}
+.bag-product-4:hover .bag-product-img-4 {
+background-image: url("https://pk.lamaretail.com/cdn/shop/files/WCS26BG028-CAMEL-THE-ERRAND-TOTE-785a50_401.jpg?v=1772008308&width=1000");
+}
+.bag-product-img-5{
+background-image: url("https://pk.lamaretail.com/cdn/shop/files/WCW25BG021-BURGUNDY-AFTER-HOURS-SHOULDER-BAG-532a3a_438.jpg?v=1772009114&width=1080");
+}
+.bag-product-5:hover .bag-product-img-5 {
+background-image: url("https://pk.lamaretail.com/cdn/shop/files/WCW25BG021-BURGUNDY-AFTER-HOURS-SHOULDER-BAG-532a3a_436.jpg?v=1772009139&width=1000");
 }
 

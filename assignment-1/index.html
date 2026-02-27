@@ -16,9 +16,7 @@
 <body>
     <div class="container">
 
-        <!-- ========== Header Section ========== -->
-        
-        
+        <!-- ========== Header Section ========== -->    
         <header>
             <div class="announcement-bar">
                 <span>FREE SHIPPING ON ORDERS ABOVE RS. 2500</span>
@@ -56,7 +54,7 @@
                                             </ul>
                                         </div>
                                     </li>
-                                    <li class="first-link"><a href="#">MAN</a>
+                                    <li class="first-link "><a href="#">MAN</a>
                                         <div class="hover-detail" >
                                             <ul>
                                                 <li class="second-link"><a href="#">NEW IN</a></li>
@@ -74,7 +72,7 @@
                                             </ul>
                                         </div>
                                     </li>
-                                    <li class="first-link"><a href="#">SHOES</a>
+                                    <li class="first-link static"><a href="#">SHOES</a>
                                         <div class="hover-detail-full-screen">
                                             <div>          
                                                 <ul>
@@ -107,7 +105,18 @@
 
                                         </div>
                                     </li>
-                                    <li class="first-link"><a href="#">ACCESSORIES</a>
+                                    
+                                    <li class="first-link"><a href="#">FRAGRANCE & LIVING</a>
+                                        <div class="hover-detail" >
+                                            <ul>
+                                                <li class="second-link"><a href="#">PERFUMES</a></li>
+                                                <li class="second-link"><a href="#">CANDLES</a></li>
+                                                <li class="second-link"><a href="#">SELF-CARE</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li class="first-link static"><a href="#">ACCESSORIES</a>
                                         <div class="hover-detail-full-screen">
                                             <div>
                                                 <ul>
@@ -135,15 +144,6 @@
                                                 </ul>
                                             </div>
 
-                                        </div>
-                                    </li>
-                                    <li class="first-link"><a href="#">FRAGRANCE & LIVING</a>
-                                        <div class="hover-detail" >
-                                            <ul>
-                                                <li class="second-link"><a href="#">PERFUMES</a></li>
-                                                <li class="second-link"><a href="#">CANDLES</a></li>
-                                                <li class="second-link"><a href="#">SELF-CARE</a></li>
-                                            </ul>
                                         </div>
                                     </li>
                                     <li class="first-link"><a href="#">Banana road</a></li>
@@ -326,7 +326,7 @@
                         <a href="">
                             <div class="shoes-product-img-4 product-img">
                             </div>
-                            <div>SUEDE LIFESTYLE SNEAKERS</div>
+                            <div>LIFESTYLE SNEAKERS</div>
                             <div>RS. 11,950.00</div>
                         </a>
 
@@ -586,8 +586,94 @@
                 </div>
             </div>
         </div>
+        <div class="footer-container">
+            <div class="footer-layout">
+                <div class="footer-child-box links">
+                    <a href="">ABOUT US</a>
+                    <a href="">CAREERS</a>
+                    <a href="">FAQs</a>
+                    <a href="">RETURNS & EXCHANGES</a>
+                    <a href="">CONTACT US</a>
+                    <a href="">PRIVACY POLICY</a>
+                </div>
+                <div class="footer-child-box singup">
+                    <span>SIGN UP AND SAVE</span>
+                    <input type="email" placeholder="Enter your email">
+                    <div class="icons">
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                        <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-child-box contacts">
+                    <span>CUSTUMER SERVICES</span>
+                    <div><a href="mailto:your@email.com">Email</a> |
+                        <a href="https://wa.me/923111115262" target="_blank">Whatsapp</a></div>
+                    <div>Contact us at 
+                        <a href="tel:">0311-1115262</a></div>
+                    <div>09:00 AM to 09:00 PM (PST)</div>
+                    <div>Monday - Saturday</div>
+                    
+                </div>
+                <div class="footer-child-box locations">
+                    <span>STORE LOCATIONS</span>
+                    <div>
+                        <span>LAHORE</span>
+                        <span>FLAGSHIP STORE</span>
+                        <a href="">22-A, Block K Gulberg-II</a>
+                    </div>
+                    <div>
+                        <span>EMPRIUM MALL</span>
+                        <a href="">T01, Level 3</a>
+                    </div>
+                    <div>
+                        <span>PACKAGES MALL</span>
+                        <a href="">Level 3</a>
+                    </div>
+                    <div>
+                        <span>DOLMEN MALL</span>
+                        <a href="">Shop # s-25, 2nd Floor</a>
+                    </div>
+                    <div>
+                        <span>ISLAMABAD</span>
+                        <a href="">Sumbal Rd, F-10 Markaz F10/4</a>
+                    </div>
+                    <div>
+                        <span>Zeta Mall</span>
+                        <a href="">UG/07</a>
+                    </div>
+                    
+                    <div>
+                        <span>KARACHI</span>
+                        <span>Dolmen Mall Clifton</span>
+                        <a href="">Shop No - D1, Ground Floor</a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="foother-end">
+                © 2026 Lama Retail
+            </div>
+
+        </div>
     
     </div>
+    <script>
+        window.addEventListener("scroll", function() {
+
+            const header = document.querySelector(".navbar");
+            const fullScreenDropdown = document.querySelector(".hover-detail-full-screen");
+            const halfScreen = window.innerHeight / 2;
+
+            if (window.scrollY > halfScreen) {
+                header.classList.add("fixed-position");
+            } else {
+                header.classList.remove("fixed-position");
+            }
+
+        });
+</script>
 </body>
 
 </html>

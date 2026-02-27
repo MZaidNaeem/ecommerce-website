@@ -47,6 +47,7 @@ body {
 .navbar {
     padding: 25px 0;
     position: relative;
+    background-color: white
 
 }
 
@@ -57,6 +58,7 @@ body {
     padding: 0 40px;
     font-size: calc(var(--typeBaseSize)*.75);
     width: 100vw;
+    position: relative;
     
 }
 
@@ -100,20 +102,31 @@ body {
     text-transform: uppercase;
 }
 
+.move-right a{
+    font-size: calc(var(--typeBaseSize)*1) !important;
+}
+
 .main-links .first-link:hover>a {
     border-bottom: 2px solid var(--colorNavText);
 }
 
 .main-links .first-link {
     position: relative;
+
+}
+
+.main-links .static{
+    position: static;
 }
 
 .main-links .first-link>div {
-    display: none;
+    visibility: hidden;
     position: absolute;
+    
 }
 
 .main-links .first-link:hover .hover-detail {
+    visibility: visible;
     display: flex;
     align-items: space-between;
     position: absolute;
@@ -143,13 +156,14 @@ body {
 }
 
 .main-links .first-link:hover .hover-detail-full-screen {
+    visibility: visible;
     display: flex;
-    position: fixed;
-    top: 95px;
+    position: absolute;
+    top: 100% ;
     left: 0;
     background-color: var(--colorBody);
     box-shadow: 0 10px 20px #00000017;
-    padding: 10px 15px;
+    padding: 40px 15px;
     z-index: 5;
     text-align: left !important;
     width: 100vw;
@@ -168,16 +182,28 @@ body {
 
 
 
+.fixed-position{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10000;
+        animation: slidenDown 0.4s ease-in-out;
+        -webkit-animation: slidenDown 0.4s ease-in-out;
+}
+
+@keyframes slidenDown{
+    from{
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
 
 
-/* <img src="https://pk.lamaretail.com/cdn/shop/files/nostalgia-series-at-lama.jpg?v=1771222370&width=2400" alt=""> */
-/* transition: all .3s cubic-bezier(.2, .06, .05, .95);
-    transition-delay: .3s; */
 
 
-/***** End header *****/
-
-
+/* banner */
 
 
 .banner-img{
@@ -221,6 +247,7 @@ body {
     gap: 30px;
     list-style-type: none;
     letter-spacing: .2em;
+    text-underline-offset: 2px;
 }
 
 .banner-links a{
@@ -228,6 +255,7 @@ body {
     font-size: calc(var(--typeBaseSize)*.85);
     letter-spacing: .2em;
 }
+/* banner end */
 
 .hero-img{
     background-image: url("https://pk.lamaretail.com/cdn/shop/files/new-women-apparel-at-lama.jpg?v=1772097392&width=2400");  
@@ -305,7 +333,7 @@ body {
 .product{
     position: relative;
     FLEX: 1;
-
+   
 }
 
 
@@ -328,6 +356,11 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
 }
 
 .product .add-to-wishlist{
@@ -339,20 +372,20 @@ body {
 }
 
 .product > button{
-    display: none;
+    visibility: hidden;
     opacity: 0;
     transform: translate(-50%, -50%);
-    transition: opacity 0.3s ease;
-    -webkit-transition: opacity 0.3s ease;
-    -moz-transition: opacity 0.3s ease;
-    -ms-transition: opacity 0.3s ease;
-    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.5s ease;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
     letter-spacing: .2em;
     font-size: calc(var(--typeBaseSize)*.75);
 }
 
 .product:hover button{
-    display: block;
+    visibility: visible;
     opacity: 1;
     position: absolute;
     top: 320px;
@@ -366,7 +399,8 @@ body {
 }
 
 .product button:hover{
-    cursor: pointer;}
+    cursor: pointer;
+}
 
 
 /* hero */
@@ -593,3 +627,118 @@ background-image: url("https://pk.lamaretail.com/cdn/shop/files/WCW25BG021-BURGU
 background-image: url("https://pk.lamaretail.com/cdn/shop/files/WCW25BG021-BURGUNDY-AFTER-HOURS-SHOULDER-BAG-532a3a_436.jpg?v=1772009139&width=1000");
 }
 
+
+
+
+/* footer */
+.footer-container {
+    border-top: 1px solid #e8e8e1;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.footer-layout{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    gap: 25px;
+    width: 100%;
+}
+
+.footer-child-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 15px;
+    flex: 1;
+}
+
+.footer-layout .links a{
+    text-decoration: none;
+    color: var(--colorNavText);
+    font-size: calc(var(--typeBaseSize)*.85);
+    
+}
+.footer-layout .singup span{
+    font-size: calc(var(--typeBaseSize)*.85);
+    letter-spacing: .2em;
+    font-family: "Forum", serif;
+    font-weight: 400;
+    font-style: normal;;
+    
+}
+.footer-layout .singup span{
+    font-size: calc(var(--typeBaseSize)*.85);
+    letter-spacing: .2em;
+    font-family: "Forum", serif;
+    font-weight: 400;
+    font-style: normal;;
+    
+}
+.footer-layout .singup input[type="email"]{
+    border-radius: 0;
+    border: 0px;
+    border-bottom: 1px solid var(--colorNavText);
+    font-size: calc(var(--typeBaseSize)*.85);
+    padding-bottom: 3px;
+}
+
+.footer-layout .singup .icons{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    font-size: calc(var(--typeBaseSize)*.85);
+
+    a{
+        text-decoration: none;
+        color: var(--colorNavText);
+    }
+}
+.footer-layout .contacts a{
+     text-decoration: underline;
+     text-underline-offset: 2px;
+     color: var(--colorNavText);
+    
+}
+
+.footer-layout .locations div{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 5px;
+    text-align: center;
+    font-size: calc(var(--typeBaseSize)*.85);
+}
+
+.footer-layout .locations,.contacts > span{
+    
+    font-size: calc(var(--typeBaseSize)*.85);
+    letter-spacing: .2em;
+    font-family: "Forum", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.footer-layout .locations div span{
+    display: block;
+    font-size: calc(var(--typeBaseSize)*.75);
+    font-weight: bolder;
+
+}
+.footer-layout .locations div a{
+     text-decoration: underline;
+     text-underline-offset: 2px;
+     color: var(--colorNavText);
+
+}
+
+.foother-end{
+    text-align: center;
+    font-size: calc(var(--typeBaseSize)*.60);
+
+}

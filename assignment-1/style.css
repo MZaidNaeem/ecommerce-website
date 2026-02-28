@@ -258,27 +258,24 @@ body {
 /* banner end */
 
 .hero-img{
-    background-image: url("https://pk.lamaretail.com/cdn/shop/files/new-women-apparel-at-lama.jpg?v=1772097392&width=2400");  
+   background-image: url("hero-and-logo-images/hero.jpg");   
 }
 
 .shoes-img{
-    background-image: url("https://pk.lamaretail.com/cdn/shop/files/new-shoes-at-lama-retail_442bb55a-a237-42f8-b3f8-890f2c7b478a.jpg?v=1772097765&width=2400");  
+   background-image: url("hero-and-logo-images/shoes.jpg");
     
 }
 .new-season-img{
-    background-image: url("https://pk.lamaretail.com/cdn/shop/files/new-womenswear-at-lama_fbcdbbb1-b68f-476c-92b1-2e32fa9ab3e6.jpg?v=1772017289&width=2400");  
+   background-image: url("hero-and-logo-images/season.jpg"); 
     
 }
 .luxury-img{
-    background-image: url("https://pk.lamaretail.com/cdn/shop/files/new-summer-safari-shirts.jpg?v=1772017390&width=2400");  
-    
+   background-image: url("hero-and-logo-images/luxury.jpg"); 
 }
 .bags-img{
-    background-image: url("https://pk.lamaretail.com/cdn/shop/files/new-party-cluthes.jpg?v=1772098094&width=2400");  
+   background-image: url("hero-and-logo-images/bags.jpg"); 
 
 }
-
-
 
 .products-container{
     margin: 45px 0 75px 0;

@@ -445,10 +445,11 @@ body {
 .footer-layout{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: start;
-    gap: 25px;
+    gap: 50px;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 .footer-child-box{
@@ -502,22 +503,40 @@ body {
         color: var(--colorNavText);
     }
 }
+
+
 .footer-layout .contacts a{
-     text-decoration: underline;
-     text-underline-offset: 2px;
-     color: var(--colorNavText);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    color: var(--colorNavText);
+    
     
 }
 
-.footer-layout .locations div{
+
+
+
+
+
+.footer-layout .locations .location-div {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    gap: 5px;
-    text-align: center;
+    gap: 20px;
     font-size: calc(var(--typeBaseSize)*.70);
 }
+
+
+
+.footer-layout .locations >span{
+    padding-bottom: 10px;
+}
+
+
+
+
+
 
 .footer-layout .locations,.contacts > span{
     
@@ -543,6 +562,7 @@ body {
 .foother-end{
     text-align: center;
     font-size: calc(var(--typeBaseSize)*.70);
+    padding-bottom: 10px;
 
     
 
@@ -632,6 +652,28 @@ body {
 
 
     /* products end */
+
+
+    /* footer */
+
+    /* .footer-layout{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+        gap: 25px;
+        width: 100%;
+} */
+
+    .footer-layout a,span,div{
+        font-size: calc(var(--typeBaseSize)*.75) !important;
+    }
+
+    .footer-child-box{
+        min-width: 40%;
+    }
+
+    /* footer end */
 }
 
 
@@ -727,7 +769,47 @@ body {
 
 
     /* products end */
-  
+
+
+
+
+    /* footer */
+
+    .footer-layout a,span,div{
+        font-size: calc(var(--typeBaseSize)*.60) !important;
+    }
+
+
+    .footer-layout .locations{
+        align-items: center;
+        text-align: center;
+    }
+
+
+    .footer-layout >div{
+        padding-top: 30px;
+        border-top: 0.5px solid rgb(126, 126, 126);
+        
+    }
+
+
+    .footer-child-box{
+        min-width: 60%;
+        align-items: center ;
+    }
+
+
+    .location-div{
+        justify-content: center ;
+        align-items: center !important;
+    }
+    
+
+    
+
+    
+
+   /* footer end */
 }
 
 

@@ -262,22 +262,22 @@ body {
 /* banner end */
 
 .hero-img{
-   background-image: url("hero-and-logo-images/hero.jpg");   
+   background-image: url("img/hero-and-logo-images/hero.jpg");   
 }
 
 .shoes-img{
-   background-image: url("hero-and-logo-images/shoes.jpg");
+   background-image: url("img/hero-and-logo-images/shoes.jpg");
     
 }
 .new-season-img{
-   background-image: url("hero-and-logo-images/season.jpg"); 
+   background-image: url("img/hero-and-logo-images/season.jpg"); 
     
 }
 .luxury-img{
-   background-image: url("hero-and-logo-images/luxury.jpg"); 
+   background-image: url("img/hero-and-logo-images/luxury.jpg"); 
 }
 .bags-img{
-   background-image: url("hero-and-logo-images/bags.jpg"); 
+   background-image: url("img/hero-and-logo-images/bags.jpg"); 
 
 }
 

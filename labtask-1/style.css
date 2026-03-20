@@ -104,14 +104,18 @@ body {
     text-wrap: nowrap;
 }
 
-.move-right a{
-    font-size: calc(var(--typeBaseSize)*0.70) !important;
-}
+
 
 .move-right .nav-links{
     gap: 12px !important;
     flex-wrap: nowrap !important;
 }
+
+
+.move-right a{
+        font-size: calc(var(--typeBaseSize)*0.85) !important;
+
+    }
 
 .main-links .first-link:hover>a {
     border-bottom: 2px solid var(--colorNavText);
@@ -272,24 +276,24 @@ body {
 /* banner end */
 
 .hero-img{
-   background-image: url("hero-and-logo-images/hero.jpg");   
+   background-image: url("img/hero-and-logo-images/hero.jpg");   
 }
 
 .shoes-img{
-   background-image: url("hero-and-logo-images/shoes.jpg");
+   background-image: url("img/hero-and-logo-images/shoes.jpg");
 
     
 }
 .new-season-img{
-   background-image: url("hero-and-logo-images/season.jpg"); 
+   background-image: url("img/hero-and-logo-images/season.jpg"); 
    background-position: top left !important;
     
 }
 .luxury-img{
-   background-image: url("hero-and-logo-images/luxury.jpg"); 
+   background-image: url("img/hero-and-logo-images/luxury.jpg"); 
 }
 .bags-img{
-   background-image: url("hero-and-logo-images/bags.jpg"); 
+   background-image: url("img/hero-and-logo-images/bags.jpg"); 
    background-position: top right !important;
 
 }
@@ -318,7 +322,7 @@ body {
     font-family: "Forum", serif;
     font-weight: 400;
     font-style: normal;
-    ;
+
 }
 .products-layout-head a{
     font-family: "Forum", serif;
@@ -364,33 +368,40 @@ body {
 }
 
 .product-img{
-    width: 100%;
-    height: 350px;
-    
+    width: 100%;   
+    position: relative;
 }
 
 .product-img .img-1,.img2{
     width: 100%;
-    height: 350px;
+
 }
 .product-img .img-2{
     width: 100%;
-    height: 350px;
-    display: none;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .product .add-to-wishlist{
     position: absolute;
-    top: 310px;
-    left: 15px;
+    top: -47px;
+    left: 5%;
     color: white;
     z-index: 2;
 }
 
-.product > button{
+.product-hover-option{
+    width: 100%;
+    position: relative;
+    padding-top: 10px;
+}
+
+.product  button{
     visibility: hidden;
     position: absolute;
-    top: 320px;
+    top: -40px;
     left: 50%;
     background-color: var(--colorBtnPrimary);
     color: var(--colorBody);
@@ -405,20 +416,15 @@ body {
 .product:hover button{
     visibility: visible;
     
-    animation: button-up 0.4s ease-in;
-    -webkit-animation: button-up 0.4s ease-in;
 }
 
-@keyframes button-up{
-    from{opacity: 0;}
-    to{opacity: 1;}
-}
+
 
 .product:hover .img-1{
-    display: none;
+    visibility: hidden;
 }
 .product:hover .img-2{
-    display: block;
+    visibility: visible;
 }
 
 .product button:hover{
@@ -538,6 +544,8 @@ body {
     text-align: center;
     font-size: calc(var(--typeBaseSize)*.70);
 
+    
+
 }
 
 
@@ -566,6 +574,11 @@ body {
 
     .logo {
          max-width: 65px;
+    }
+
+    .move-right a{
+        font-size: calc(var(--typeBaseSize)*0.75) !important;
+
     }
 
 
@@ -600,6 +613,9 @@ body {
 
     .products-layout{
         padding: 0 30px;
+        font-size: calc(var(--typeBaseSize)*.60);
+        
+
 }
 
     .products-layout-products{
@@ -610,15 +626,8 @@ body {
 
 
     .product{
-        position: relative;
-        FLEX: 1;
-        min-width: 80vw;
-        height: 90vh;
-    }
 
-    .product-img .img-1,.img2{
-        width: 100%;
-        height: 90vh;
+        min-width: 75vw;
     }
 
 
@@ -652,7 +661,7 @@ body {
     }
 
     .move-right a{
-        font-size: calc(var(--typeBaseSize)*0.60) !important;
+        font-size: calc(var(--typeBaseSize)*0.70) !important;
 
     }
 
@@ -694,9 +703,18 @@ body {
 
     .products-layout{
         padding: 0 20px;
-}
+        font-size: calc(var(--typeBaseSize)*.60);
+    }
 
- .products-layout-products{
+    .products-layout-products{
+        gap: 5px;
+        overflow: scroll;
+        padding-bottom: 10px;
+    }
+
+
+
+    .products-layout-products{
         gap: 5px;
         overflow: scroll;
         padding-bottom: 10px;
@@ -704,8 +722,9 @@ body {
 
 
     .product{
-        min-width: 80vw;
+        min-width: 75vw;
     }
+
 
     /* products end */
   

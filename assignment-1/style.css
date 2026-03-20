@@ -84,13 +84,14 @@ body {
 
 .nav-links {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     list-style-type: none;
     font-size: 0.9em;
     letter-spacing: .2em;
     padding: 7.5px 0;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .nav-links .first-link>a {
@@ -104,6 +105,9 @@ body {
 
 .move-right a{
     font-size: calc(var(--typeBaseSize)*1) !important;
+}
+.end-nav{
+    flex-wrap: nowrap !important;
 }
 
 .main-links .first-link:hover>a {

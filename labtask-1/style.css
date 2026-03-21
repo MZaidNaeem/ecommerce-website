@@ -68,6 +68,10 @@ body {
     gap: 20px;
 }
 
+.menu-icon{
+    display: none !important;
+}
+
 .logo {
     max-width: 70px;
 }
@@ -386,7 +390,7 @@ body {
 
 .product .add-to-wishlist{
     position: absolute;
-    top: -47px;
+    top: -57px;
     left: 5%;
     color: white;
     z-index: 2;
@@ -401,7 +405,7 @@ body {
 .product  button{
     visibility: hidden;
     position: absolute;
-    top: -40px;
+    top: -50px;
     left: 50%;
     background-color: var(--colorBtnPrimary);
     color: var(--colorBody);
@@ -447,12 +451,20 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: start;
-    gap: 50px;
     width: 100%;
     flex-wrap: wrap;
 }
 
 .footer-child-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 15px;
+    flex: 1;
+}
+
+.footer-child-box>div{
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -529,10 +541,6 @@ body {
 
 
 
-.footer-layout .locations >span{
-    padding-bottom: 10px;
-}
-
 
 
 
@@ -562,11 +570,23 @@ body {
 .foother-end{
     text-align: center;
     font-size: calc(var(--typeBaseSize)*.70);
-    padding-bottom: 10px;
-
-    
+    padding: 20px 0; 
 
 }
+
+
+
+
+
+.dropdown-icon{
+    display: none !important;
+}
+
+
+
+
+
+
 
 
 
@@ -579,6 +599,14 @@ body {
 
 
   /* navbar */
+
+  .menu-icon{
+        display: block !important;
+        font-size: calc(var(--typeBaseSize)*1) !important;
+        display: flex;
+        justify-content: center;
+        align-items: center
+  }
 
     .navbar {
         padding: 20px 0;
@@ -656,14 +684,7 @@ body {
 
     /* footer */
 
-    /* .footer-layout{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: start;
-        gap: 25px;
-        width: 100%;
-} */
+
 
     .footer-layout a,span,div{
         font-size: calc(var(--typeBaseSize)*.75) !important;
@@ -671,9 +692,13 @@ body {
 
     .footer-child-box{
         min-width: 40%;
+        padding: 20px 0;
+    }
+    .footer-container {
+        padding: 30px 30px;
+
     }
 
-    /* footer end */
 }
 
 
@@ -682,6 +707,14 @@ body {
 
 
   /* navbar */
+  .menu-icon{
+            display: block !important;
+            font-size: calc(var(--typeBaseSize)*1) !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+}
 
   
     .navbar {
@@ -785,12 +818,16 @@ body {
         text-align: center;
     }
 
-
     .footer-layout >div{
-        padding-top: 30px;
-        border-top: 0.5px solid rgb(126, 126, 126);
+        padding: 10px 0;
+        border-bottom: 0.5px solid #e8e8e1;
         
     }
+    .footer-layout {
+        gap: 0;
+        
+    }
+
 
 
     .footer-child-box{
@@ -799,12 +836,83 @@ body {
     }
 
 
+
     .location-div{
         justify-content: center ;
         align-items: center !important;
     }
     
+    .dropdown-icon{
+        display: inline-block !important;
+    }
 
+
+    /* Hide all dropdown divs by default */
+    .signup-div, .contacts-div, .location-div {
+        display: none !important;
+    }
+
+    /* The class JS will add/remove */
+    .footer-child-box.active .signup-div,
+    .footer-child-box.active .contacts-div,
+    .footer-child-box.active .location-div {
+        display: flex !important;
+    }
+
+    .footer-child-box.active .dropdown-icon {
+        transform: rotate(180deg);
+        transition: transform 0.3s ease;
+}
+
+    .footer-container {
+        padding: 0 20px;
+
+    }
+
+    .foother-end{
+        font-size: calc(var(--typeBaseSize)*.60);
+        padding: 10px 0; 
+
+    }
+
+
+    .footer-layout  a,span{
+
+        font-size: calc(var(--typeBaseSize)*.60);
+    
+    }
+    
+    .footer-layout .singup input[type="email"]{
+        font-size: calc(var(--typeBaseSize)*.60);
+    }
+
+    .footer-layout .singup {
+        gap: 5px;
+        font-size: calc(var(--typeBaseSize)*.60);
+    }
+
+    .footer-layout .singup .icons{
+        gap: 5px;
+        font-size: calc(var(--typeBaseSize)*.60);
+    }
+
+    .footer-child-box>div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        flex: 1;
+}
+
+.signup-div{
+    padding-top: 10px;
+}
+
+
+
+
+    /* footer end */
     
 
     
@@ -814,3 +922,8 @@ body {
 
 
 /* End Media Query */
+
+
+
+  
+

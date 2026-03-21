@@ -26,6 +26,7 @@
                 <div class="navbar">
                     <div class="navbar-nav">
                         <div class="navbar-layout">
+                            <div class="nav-item menu-icon"><i class="fa-solid fa-bars "></i></div>
                             <div class="nav-item logo"><a href=""><img
                                         src="img/hero-and-logo-images/logo.png"
                                         alt="Logo" class="logo"></a></div>
@@ -771,43 +772,47 @@
                     <a href="">PRIVACY POLICY</a>
                 </div>
                 <div class="footer-child-box singup">
-                    <span>SIGN UP AND SAVE</span>
-                    <input type="email" placeholder="Enter your email">
-                    <div class="icons">
-                        <a href=""><i class="fa-brands fa-instagram"></i></a>
-                        <a href=""><i class="fa-brands fa-facebook"></i></a>
-                        <a href=""><i class="fa-brands fa-youtube"></i></a>
-                        <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                    <span class="drop-down-heading">SIGN UP AND SAVE <i class="fa-solid fa-angle-down dropdown-icon"></i></span>
+                    <div class="signup-div">
+                        <input type="email" placeholder="Enter your email">
+                        <div class="icons">
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                            <a href=""><i class="fa-brands fa-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-youtube"></i></a>
+                            <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-child-box contacts">
-                    <span>CUSTUMER SERVICES</span>
-                    <div><a href="mailto:your@email.com">Email</a> |
+                    <span class="drop-down-heading">CUSTUMER SERVICES <i class="fa-solid fa-angle-down dropdown-icon"></i></span>
+                    <div class="contacts-div">
+                        <div><a href="mailto:your@email.com">Email</a> |
                         <a href="https://wa.me/923111115262" target="_blank">Whatsapp</a></div>
-                    <div>Contact us at <a href="tel:">0311-1115262</a></div>
-                    <div>09:00 AM to 09:00 PM (PST)</div>
-                    <div>Monday - Saturday</div>
+                        <div>Contact us at <a href="tel:">0311-1115262</a></div>
+                        <div>09:00 AM to 09:00 PM (PST)</div>
+                        <div>Monday - Saturday</div>
+                    </div>
                     
                 </div>
                 <div class="footer-child-box locations">
-                    <span>STORE LOCATIONS</span>
-                        <div class="location-div">
-                            <div>
-                                <span>LAHORE</span>
-                                <span>FLAGSHIP STORE</span>
-                                <a href="">22-A, Block K Gulberg-II</a>
-                            </div>
-                            <div>
-                                <span>EMPRIUM MALL</span>
-                                <a href="">T01, Level 3</a>
-                            </div>
-                            <div>
-                                <span>PACKAGES MALL</span>
-                                <a href="">Level 3</a>
-                            </div>
-                            
+                    <span class="drop-down-heading">STORE LOCATIONS <i class="fa-solid fa-angle-down dropdown-icon"></i></span>
+                    <div class="location-div">
+                        <div>
+                            <span>LAHORE</span>
+                            <span>FLAGSHIP STORE</span>
+                            <a href="">22-A, Block K Gulberg-II</a>
                         </div>
+                        <div>
+                            <span>EMPRIUM MALL</span>
+                            <a href="">T01, Level 3</a>
+                        </div>
+                        <div>
+                            <span>PACKAGES MALL</span>
+                            <a href="">Level 3</a>
+                        </div>
+                            
                     </div>
+                </div>
                     
                 </div>
             </div>
@@ -832,6 +837,18 @@
             }
 
         });
+
+
+        const footerTriggers = document.querySelectorAll('.footer-child-box span');
+
+        footerTriggers.forEach(trigger => {
+            trigger.addEventListener('click', function() {
+                if (window.innerWidth < 768) {
+                    const parent = this.parentElement;
+                    parent.classList.toggle('active'); 
+                }
+            });
+});
 </script>
 </body>
 

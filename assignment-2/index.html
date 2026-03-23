@@ -42,7 +42,7 @@
 
 
                                     <li class="first-link">
-                                        <div class="first-link-heading"><a href="#">WOMAN </a> <i
+                                        <div class="first-link-heading"><a href="">WOMAN </a> <i
                                                 class="fa-solid fa-greater-than more-option"></i></div>
                                         <div class="hover-detail sm-tb-hover-detail closing-True">
                                             <div class="drawer-header">
@@ -102,8 +102,8 @@
                                     <li class="first-link  static">
                                         <div class="first-link-heading"><a href="#">SHOES</a> <i
                                                 class="fa-solid fa-greater-than more-option"></i></div>
-                                                
-                                        <div class="hover-detail-full-screen">
+
+                                        <div class="hover-detail-full-screen sm-tb-full-screen closing-True">
                                             <div class="full-detail-header">
                                                 <div></div>
                                                 <div><a href="">SHOES</a></div>
@@ -111,18 +111,19 @@
                                             </div>
 
                                             <div class="columns">
-                                                <div>
+                                                <div class="column-container">
                                                     <div class="column-opener">
                                                         <a href="">WOMAN</a>
                                                         <i class="fa-solid fa-greater-than more-option"></i>
                                                     </div>
-                                                    <div class="column">
+                                                    <div class="column closing-True">
                                                         <div class="column-head">
                                                             <div></div>
                                                             <div><a href="#">WOMAN</a></div>
                                                             <div><i class="fa-solid fa-angle-left closing-button"></i>
                                                             </div>
                                                         </div>
+
                                                         <ul>
 
                                                             <li class="second-link"><a href="#">NEW IN</a></li>
@@ -139,12 +140,12 @@
                                                     </div>
                                                 </div>
 
-                                                <div>
+                                                <div class="column-container">
                                                     <div class="column-opener">
-                                                        <a href="">WOMAN</a>
+                                                        <a href="">Man</a>
                                                         <i class="fa-solid fa-greater-than more-option"></i>
                                                     </div>
-                                                    <div class="column">
+                                                    <div class="column closing-True">
                                                         <div class="column-head">
                                                             <div></div>
                                                             <div><a href="#">MAN</a></div>
@@ -196,7 +197,7 @@
                                             </div>
 
                                             <div class="columns">
-                                                <div>
+                                                <div class="column-container">
                                                     <div class="column-opener">
                                                         <a href="">WOMAN</a>
                                                         <i class="fa-solid fa-greater-than more-option"></i>
@@ -221,7 +222,7 @@
                                                     </div>
                                                 </div>
 
-                                                <div>
+                                                <div class="column-container">
                                                     <div class="column-opener">
                                                         <a href="">MAN</a>
                                                         <i class="fa-solid fa-greater-than more-option"></i>
@@ -968,88 +969,9 @@
     </div>
 
     </div>
-    <script>
-
-        // navbar movetop and sticky on user scoll to some point
-        window.addEventListener("scroll", function () {
-
-            const header = document.querySelector(".navbar");
-            const fullScreenDropdown = document.querySelector(".hover-detail-full-screen");
-            const halfScreen = window.innerHeight / 2;
-
-
-            if (window.scrollY > halfScreen) {
-                header.classList.add("fixed-position");
-
-            } else {
-                header.classList.remove("fixed-position");
-            }
-
-        });
-
-
-        // footer section toggle on samll screen
-        const footerTriggers = document.querySelectorAll('.footer-child-box span');
-
-        footerTriggers.forEach(trigger => {
-            trigger.addEventListener('click', function () {
-                if (window.innerWidth < 768) {
-                    const parent = this.parentElement;
-                    parent.classList.toggle('active');
-                }
-            });
-        });
-
-
-
-        // navbar opening on clicking on hamburger menu
-        const menuIcon = document.querySelector('.menu-icon');
-        const mainLinks = document.querySelector('.main-links');
-
-        menuIcon.addEventListener('click', () => {
-            mainLinks.classList.toggle('active');
-
-        });
-
-        // document.querySelector('.closing-button').addEventListener('click', function () {
-        //     const drawer = this.closest('.sm-tb-hover-detail');
-        //     drawer.classList.remove('active');
-        // });
-        // });
-
-
-        // main navbar sidebar openingclosing
-
-
-        const closeBtn = document.querySelector('closing-button');
-
-
-        document.querySelectorAll('.more-option').forEach(icon => {
-            icon.addEventListener('click', function () {
-                const parent = this.closest('.first-link');
-                const drawer = parent.querySelector('.sm-tb-hover-detail');
-
-                drawer.classList.add('active');
-            });
-        });
-
-
-        document.querySelectorAll('.more-option').forEach(icon => {
-            icon.addEventListener('click', function () {
-                const parent = this.closest('.first-link');
-                const drawer = parent.querySelector('.sm-tb-full-screen');
-
-                drawer.classList.add('active');
-            });
-        });
-
-        document.querySelectorAll('.closing-button').forEach(closeBtn => {
-            closeBtn.addEventListener('click', function () {
-                const drawer = this.closest('.closing-True');
-                drawer.classList.remove('active');
-            });
-        });
-    </script>
+    
 </body>
+    <script src="script.js"></script>
+
 
 </html>

@@ -83,3 +83,77 @@ footerTriggers.forEach(trigger => {
         }
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+$(document).ready(function () {
+
+    $.ajax({
+        url: "https://fakestoreapi.com/products?limit=5",
+        method: "GET",
+        success: function (data) {
+
+            let container = $(".dynamic-products");
+
+            data.forEach(product => {
+
+                let productCard = `
+                <div class="product">
+                    <a href="">
+                        <div class="product-img">
+                            <img class="img-1" src="${product.image}" alt="">
+                            <img  class="img-2" src="${product.image}" alt="">
+                        </div>
+                    </a>
+
+                    <div class="product-hover-option">
+                        <button class="product-quick-view show-model"
+                            data-title="${product.title}"
+                            data-desc="${product.description}"
+                            data-img="${product.image}"
+                            data-rating="${product.rating.rate}">
+                            Quick View
+                        </button>
+                    </div>
+
+                    <a href="">
+                        <div>${product.title}</div>
+                        <div>RS. ${(product.price * 280).toFixed(2)}</div>
+                    </a>
+                </div>
+                `;
+
+                container.append(productCard);
+            });
+        }
+    });
+
+});
+
+$(document).on("click", ".show-model", function () {
+
+    $("#modal-title").text($(this).data("title"));
+    $("#modal-desc").text($(this).data("desc"));
+    $("#modal-img").attr("src", $(this).data("img"));
+    $("#modal-rating").text("Rating: " + $(this).data("rating"));
+
+    $("#quickViewModal").fadeIn();
+});
+
+$(".close-btn").click(function () {
+    $("#quickViewModal").fadeOut();
+});
+
+$(window).click(function (e) {
+    if ($(e.target).is("#quickViewModal")) {
+        $("#quickViewModal").fadeOut();
+    }
+});

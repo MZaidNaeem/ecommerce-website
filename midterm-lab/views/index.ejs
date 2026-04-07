@@ -16,6 +16,16 @@
 <body>
     <div class="container">
 
+        <div id="quickViewModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <img id="modal-img" src="" alt="">
+                <h2 id="modal-title"></h2>
+                <p id="modal-desc"></p>
+                <p id="modal-rating"></p>
+            </div>
+        </div>
+
         <!-- ========== Header Section ========== -->
         <header>
             <div class="announcement-bar">
@@ -322,100 +332,11 @@
         <div class="products-container">
             <div class="products-layout">
                 <div class="products-layout-head">
-                    <h2>NEW</h2>
+                    <h2>Dynamically added items</h2>
                     <a href="">VIEW ALL</a>
                 </div>
-                <div class="products-layout-products">
-                    <div class="product hero-product-1">
-                        <a href="">
-                            <div class="hero-product-img-1 product-img">
-                                <img class="img-1" src="img/hero/product1-1.jpg" alt="">
-                                <img class="img-2" src="img/hero/product1-2.jpg" alt="">
-                            </div>
-                        </a>
-                        <div class="product-hover-option">
-                            <a class="product-wishlist" href=""><i class="fa-solid fa-heart  add-to-wishlist"></i></a>
-                            <button class="product-quick-view">Quick View</button>
-                        </div>
-
-                        <a href="">
-                            <div>COTTON STRIPE SHIRT DRESS</div>
-                            <div>RS. 8,450.00</div>
-                        </a>
-
-                    </div>
-                    <div class="product hero-product-2">
-                        <a href="">
-                            <div class="hero-product-img-2 product-img">
-                                <img class="img-1" src="img/hero/product2-1.jpg" alt="">
-                                <img class="img-2" src="img/hero/product2-2.jpg" alt="">
-                            </div>
-                        </a>
-
-                        <div class="product-hover-option">
-                            <a class="product-wishlist" href=""><i class="fa-solid fa-heart  add-to-wishlist"></i></a>
-                            <button class="product-quick-view">Quick View</button>
-                        </div>
-                        <a href="">
-
-                            <div>SALMON PINSTRIPE SHIRT</div>
-                            <div>RS. 5,450.00</div>
-                        </a>
-                    </div>
-                    <div class="product hero-product-3">
-                        <a href="">
-                            <div class="hero-product-img-3 product-img">
-                                <img class="img-1" src="img/hero/product3-1.jpg" alt="">
-                                <img class="img-2" src="img/hero/product3-2.jpg" alt="">
-                            </div>
-                        </a>
-
-                        <div class="product-hover-option">
-                            <a class="product-wishlist" href=""><i class="fa-solid fa-heart  add-to-wishlist"></i></a>
-                            <button class="product-quick-view">Quick View</button>
-                        </div>
-                        <a href="">
-
-                            <div>SLOUCHY EASE PANTS</div>
-                            <div>RS. 7,950.00</div>
-                        </a>
-                    </div>
-                    <div class="product hero-product-4">
-                        <a href="">
-                            <div class="hero-product-img-4 product-img">
-                                <img class="img-1" src="img/hero/product4-1.jpg" alt="">
-                                <img class="img-2" src="img/hero/product4-2.jpg" alt="">
-                            </div>
-                        </a>
-
-                        <div class="product-hover-option">
-                            <a class="product-wishlist" href=""><i class="fa-solid fa-heart  add-to-wishlist"></i></a>
-                            <button class="product-quick-view">Quick View</button>
-                        </div>
-                        <a href="">
-
-                            <div>THE ERRAND TOTE</div>
-                            <div>RS. 11,950.00</div>
-                        </a>
-                    </div>
-                    <div class="product hero-product-5">
-                        <a href="">
-                            <div class="hero-product-img-5 product-img">
-                                <img class="img-1" src="img/hero/product5-1.jpg" alt="">
-                                <img class="img-2" src="img/hero/product5-2.jpg" alt="">
-                            </div>
-                        </a>
-
-                        <div class="product-hover-option">
-                            <a class="product-wishlist" href=""><i class="fa-solid fa-heart  add-to-wishlist"></i></a>
-                            <button class="product-quick-view">Quick View</button>
-                        </div>
-                        <a href="">
-
-                            <div>ONE SIZE COTTON SHIRT DRESS</div>
-                            <div>RS. 9,950.00</div>
-                        </a>
-                    </div>
+                <div class="products-layout-products dynamic-products">
+                    <!-- #add products dynamically -->
                 </div>
             </div>
         </div>
@@ -440,6 +361,8 @@
             </div>
         </div>
         <!-- ========== shores End Section ========== -->
+
+        
 
         <div class="products-container">
             <div class="products-layout">
@@ -971,5 +894,7 @@
     </div>
     
 </body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <script src="/js/script.js"></script>
 </html>

@@ -1,0 +1,455 @@
+/* ═══════════════════════════════════════════════
+   products.css  –  Catalog page styles
+   Complements the existing style.css
+═══════════════════════════════════════════════ */
+
+/* ── Page title banner ────────────────────────── */
+.catalog-hero {
+  padding: 3rem 2rem 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.catalog-hero h1 {
+  font-family: "Forum", serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  letter-spacing: 0.12em;
+  margin: 0 0 0.25rem;
+}
+
+.catalog-hero p {
+  font-size: 0.85rem;
+  color: #888;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* ── Filter bar ───────────────────────────────── */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  align-items: flex-end;
+  padding: 1.5rem 2rem;
+  background: #fafafa;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex: 1 1 150px;
+}
+
+.filter-group label {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #666;
+  font-weight: 600;
+}
+
+.filter-group input,
+.filter-group select {
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #d0d0d0;
+  background: #fff;
+  font-size: 0.85rem;
+  font-family: inherit;
+  color: #222;
+  outline: none;
+  border-radius: 0;
+  transition: border-color 0.2s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.filter-group select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2rem;
+}
+
+.filter-group input:focus,
+.filter-group select:focus {
+  border-color: #222;
+}
+
+/* Search with icon */
+.search-input-wrap {
+  position: relative;
+}
+
+.search-input-wrap i {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 0.8rem;
+  pointer-events: none;
+}
+
+.search-input-wrap input {
+  padding-left: 2.2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Price range side-by-side inputs */
+.price-inputs {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.price-inputs input {
+  width: 90px;
+  flex: 1;
+}
+
+.price-inputs span {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Filter action buttons */
+.filter-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-end;
+  flex: 0 0 auto;
+}
+
+.btn-apply,
+.btn-clear {
+  padding: 0.55rem 1.25rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: inherit;
+  cursor: pointer;
+  border: 1px solid #222;
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-apply {
+  background: #222;
+  color: #fff;
+}
+
+.btn-apply:hover {
+  background: #000;
+}
+
+.btn-clear {
+  background: #fff;
+  color: #222;
+}
+
+.btn-clear:hover {
+  background: #f0f0f0;
+}
+
+/* ── Product grid ─────────────────────────────── */
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2px;
+  padding: 2px;
+  margin: 2rem auto;
+  max-width: 1400px;
+  padding: 0 1rem 2rem;
+}
+
+/* ── Product card ─────────────────────────────── */
+.catalog-card {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s;
+  position: relative;
+}
+
+.catalog-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Card image area */
+.catalog-card-img {
+  position: relative;
+  background: #f5f5f5;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-placeholder {
+  font-size: 3.5rem;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Hover overlay */
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.15));
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.catalog-card:hover .card-overlay {
+  opacity: 1;
+}
+
+.catalog-card:hover .img-1 {
+  visibility: hidden;
+}
+
+.catalog-card:hover .img-2 {
+  visibility: visible;
+}
+
+.btn-wishlist {
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-wishlist:hover {
+  background: #222;
+  color: #fff;
+}
+
+.btn-quick-view {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid #fff;
+  background: #fff;
+  color: #222;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-quick-view:hover {
+  background: #222;
+  color: #fff;
+  border-color: #222;
+}
+
+/* Card body */
+.catalog-card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex: 1;
+}
+
+.card-category {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #999;
+  margin: 0;
+}
+
+.card-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  margin: 0;
+  color: #222;
+  line-height: 1.3;
+}
+
+/* Stars */
+.card-rating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 0.7rem;
+  color: #c9a84c;
+}
+
+.card-rating .rating-value {
+  color: #999;
+  margin-left: 4px;
+  font-size: 0.7rem;
+}
+
+/* Footer row */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.card-price {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.card-stock {
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #5a9e6f;
+  background: #edf7f1;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.card-stock.low-stock {
+  color: #c0672d;
+  background: #fef3eb;
+}
+
+/* ── No results state ────────────────────────── */
+.no-results {
+  text-align: center;
+  padding: 5rem 2rem;
+  color: #999;
+}
+
+.no-results i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+  color: #ddd;
+}
+
+.no-results p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ── Pagination ──────────────────────────────── */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  padding: 2rem 1rem 0.5rem;
+}
+
+.page-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  border: 1px solid #d0d0d0;
+  color: #333;
+  background: #fff;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  font-family: inherit;
+}
+
+.page-btn:hover:not(.disabled):not(.active) {
+  background: #f5f5f5;
+  border-color: #bbb;
+}
+
+.page-btn.active {
+  background: #222;
+  color: #fff;
+  border-color: #222;
+}
+
+.page-btn.disabled {
+  color: #ccc;
+  cursor: default;
+  border-color: #e8e8e8;
+}
+
+.page-ellipsis {
+  padding: 0.5rem 0.3rem;
+  color: #aaa;
+  font-size: 0.85rem;
+}
+
+.pagination-info {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #999;
+  letter-spacing: 0.06em;
+  margin-bottom: 2rem;
+}
+
+/* ── Responsive tweaks ───────────────────────── */
+@media (max-width: 768px) {
+  .filter-bar {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+
+  .filter-group {
+    flex: 1 1 calc(50% - 0.5rem);
+  }
+
+  .filter-search {
+    flex: 1 1 100%;
+  }
+
+  .filter-actions {
+    flex: 1 1 100%;
+    justify-content: flex-end;
+  }
+
+  .catalog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 0.75rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .catalog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-group {
+    flex: 1 1 100%;
+  }
+}
